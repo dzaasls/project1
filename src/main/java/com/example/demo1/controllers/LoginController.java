@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  *
@@ -22,7 +23,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  */
 
 @Controller
-public class LoginController {
+public class LoginController { 
 
     @Autowired
     private UserInterface userInterface;
@@ -36,15 +37,15 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/login")
+@PostMapping("/login")
     public String store(@ModelAttribute("user") User user,
-            HttpServletRequest request) throws Exception {
+            HttpServletRequest request, RedirectAttributes ra) throws Exception {
         HttpSession session = request.getSession(true);
 
         User obj = userInterface.auth(user.getEmail(), user.getPassword());
 
         if (obj == null) {
-            session.setAttribute("error", "Invalid username or password!");
+            ra.addFlashAttribute("error", "Invalid username or password!");
             return "redirect:/login";
         }
 
