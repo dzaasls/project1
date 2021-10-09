@@ -1,0 +1,91 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.example.demo1.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ *
+ * @author Dell
+ */
+@Entity
+@Table(name="donation")
+public class Donation {
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long id;
+    
+    @Column(name="name")
+    private String name;
+    
+    @Column(name="total")
+    private long total;
+
+    @Column(name="receipt")
+    private String receipt;
+    
+    @Column(name="catagory")
+    private long catagory;
+    
+    @Column(name="date")
+    private String date;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getTotal() {
+        return total;
+    }
+
+    public void setTotal(long total) {
+        this.total = total;
+    }
+
+    public String getReceipt() {
+        return receipt;
+    }
+
+    public void setReceipt(String receipt) {
+        this.receipt = receipt;
+    }
+
+    public long getCatagory() {
+        return catagory;
+    }
+
+    public void setCatagory(long catagory) {
+        this.catagory = catagory;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+    
+    
+}
