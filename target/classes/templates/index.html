@@ -35,7 +35,7 @@
 
             <div class="splash">
                 <div class="img"></div>
-                Welcome </div>
+                Welcome -<span th:text="${session.name}"></span></div>
 
             <div class="container"> 
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,13 +47,14 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden"> <a href="#page-top"></a> </li>
+                        <li> <a class="page-scroll" href="http://localhost:8080/dashboard" >Dashboard</a> </li>
                         <li> <a class="page-scroll" href="#services">Services</a> </li>
                         <li> <a class="page-scroll" href="#portfolio">Activities</a> </li>
                         <li> <a class="page-scroll" href="#about">About</a> </li>
                         <li> <a class="page-scroll" href="#team">Team</a> </li>
-                        <li> <a class="page-scroll" href="#donation">Donation</a> </li>
+                        
                         <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-                        <li> <a class="page-scroll" href="#location" >Location</a> </li>
+                        
                         <li> <a onclick="return confirm('Are you sure ?')" class="tombol-login" href="IndexServlet"><img th:src="@{/img/login-20.png}"  /> Logout</a></li>
                     </ul>
                 </div>
@@ -346,6 +347,7 @@
   </div>
 </section>
         
+
        
         <footer>
   <div class="container">

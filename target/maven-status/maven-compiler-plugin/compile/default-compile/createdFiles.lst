@@ -3,6 +3,7 @@ com\example\demo1\Demo1Application.class
 com\example\demo1\services\UserService.class
 com\example\demo1\models\User.class
 com\example\demo1\controllers\LoginController.class
+com\example\demo1\controllers\DashboardController.class
 com\example\demo1\interfaces\UserInterface.class
 com\example\demo1\controllers\RegisterController.class
 com\example\demo1\controllers\LogoutController.class
