@@ -33,7 +33,7 @@
     <body id="page-top" class="index">
         <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
 
-           
+
 
             <div class="container"> 
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,14 +46,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden"> <a href="#page-top"></a> </li>
                         <li> <a class="page-scroll" href="http://localhost:8080">Main Page</a> </li>
-                        <li> <a class="page-scroll" href="#services">Services</a> </li>
-                        <li> <a class="page-scroll" href="#portfolio">Activities</a> </li>
-                        <li> <a class="page-scroll" href="#about">About</a> </li>
-                        <li> <a class="page-scroll" href="#team">Team</a> </li>
-                        
-                        <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-                        
-                        <li> <a onclick="return confirm('Are you sure ?')" class="tombol-login" href="IndexServlet"><img th:src="@{/img/login-20.png}"  /> Logout</a></li>
+                       
+
+                        <li> <a onclick="return confirm('Are you sure ?')" class="tombol-login" href="http://localhost:8080/logout"><img th:src="@{/img/login-20.png}"  /> Logout</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse --> 
@@ -67,7 +62,7 @@
 
         <!-- Header -->
         <header>
-    
+
             <div class="container">
                 <div class="intro-text">
                     <div class="intro-lead-in">Welcome To Our Foundation</div>
@@ -76,93 +71,170 @@
             </div>
         </header>
 
-        
-        <!-- DONATION SECTION -->
-<section id="donation">
+
+        <!-- About Section -->
+<section id="message" >
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">DONATION FORM</h2>
-        <h3 class="section-subheading text-muted">Please fullfil the donation form.</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <form name="donationform"  action="" method="post" >
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Name *" name="namadonasi" id="namadonasi" required data-validation-required-message="Please enter your name." value="<%=session.getAttribute("usernameakun")%>" >
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input type="number" class="form-control" placeholder="Total Donation *" name="totaldonasi" id="totaldonasi" min="10000" required data-validation-required-message="Please enter your total donation.">
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input type="file" class="form-control" placeholder="Payment Receipt *" name="receiptdonasi" id="receiptdonasi" min="0" required data-validation-required-message="Please enter your receipt number." accept="image/gif,image/jpeg,image/jpg,image/png,">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                  <select class="form-control" id="katagoridonasi" name="katagoridonasi" required>
-                      <option value="">--SELECT CATEGORY--</option>
-                      <option value="Pembangunan Masjid">Pembangunan Masjid</option>
-                      <option value="Pembangunan Pusat Dagang">Pembangunan Pusat Dagang</option>
-                      <option value="Pembangunan Jembatan">Pembangunan Jembatan</option>
-                      <option value="Pembangunan Pesantren">Pembangunan Pesantren</option>
-                      <option value="Penggalangan Dana">Penggalangan Dana</option>
-                      <option value="Beasiswa Anak Yatim">Beasiswa Anak Yatim</option>
-                  </select>
-                <p class="help-block text-danger"></p>
-              </div>
-                <div class="form-group">
-                    <select class="form-control" id="metodedonasi" name="metodedonasi" required >
-                      <option value="">--SELECT PAYMENT--</option>
-                      <option value="OVO">OVO</option>
-                      <option value="DANA">DANA</option>
-                      <option value="BCA">BCA</option>
-                      <option value="MANDIRI">MANDIRI</option>
-                      <option value="SHOPEEPAY">SHOPEEPAY</option>
-                      <option value="GO-PAY">GO-PAY</option>
-                  </select>
-                <p class="help-block text-danger"></p>    
-                </div>
-                <a class="btn btn-warning" href="#portfolioModaldonasi" class="portfolio-link" data-toggle="modal">How To Donation</a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-lg-12 text-center">
-             
-              <input onclick="return confirm('Are you sure ?')" type="submit" value="Send Donation" class="btn btn-xl">
-            </div>
-          </div>
-        </form>
+        <h2 class="section-heading">Available Donation</h2>
+        <br>
+        <div id="overflowtest">
+        <table  class="table table-hover">
+	<tr>
+            <th>No</th>
+            <th>No ID</th>
+            <th>Donation Name</th>
+            <th>Total of Donation</th>
+            <th>Describtion</th>
+            <th>Date</th>
+          
+            
+	</tr>
+   
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+
+        </tr>
+       
+    </table>
+        </div>
       </div>
     </div>
   </div>
 </section>
-       
-        <footer>
+        
+      <section id="donation" class="bg-light-gray">
   <div class="container">
     <div class="row">
-      <div class="col-md-4"> <span class="copyright">Copyright &copy; Berbagi.com 2021</span></div>
-      <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          <li><a href="https://www.instagram.com/berbagicom/" target="_blank"><i class="fa fa-instagram"></i></a> </li>
-          <li><a href="https://www.youtube.com/channel/UC0G0ZZGqxz-sFDaPQ82b9Mw?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a> </li>
-          <li><a href="https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit"target="_blank"><i class="fa fa-linkedin"></i></a> </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li><a href="#">Privacy Policy</a> </li>
-          <li><a href="#">Terms of Use</a> </li>
-        </ul>
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">YOUR DONATION HISTORY</h2>
+        <br>
+        <div id="overflowtest">
+                <table  class="table table-hover">
+	<tr>
+            <th>No</th>
+            <th>No ID</th>
+            <th>Tanggal</th>
+            <th>Username</th>
+            <th>Jumlah Donasi</th>
+            <th>Bukti</th>
+            <th>Katagori</th>
+            <th>Metode</th>
+            
+	</tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+       
+    </table>
+        </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
- 
-</body>
+</section>
+
+        
+        <section id="donation" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">DONATION FORM</h2>
+                        <h3 class="section-subheading text-muted">Please fullfil the donation form.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form name="donationform"  action="" method="post" >
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name *" name="namadonasi" id="namadonasi" required data-validation-required-message="Please enter your name." value="" >
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Total Donation *" name="totaldonasi" id="totaldonasi" min="10000" required data-validation-required-message="Please enter your total donation.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" placeholder="Payment Receipt *" name="receiptdonasi" id="receiptdonasi" min="0" required data-validation-required-message="Please enter your receipt number." accept="image/gif,image/jpeg,image/jpg,image/png,">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select class="form-control" id="katagoridonasi" name="katagoridonasi" required>
+                                            <option value="">--SELECT CATEGORY--</option>
+                                            <option value="Pembangunan Masjid">Pembangunan Masjid</option>
+                                            <option value="Pembangunan Pusat Dagang">Pembangunan Pusat Dagang</option>
+                                            <option value="Pembangunan Jembatan">Pembangunan Jembatan</option>
+                                            <option value="Pembangunan Pesantren">Pembangunan Pesantren</option>
+                                            <option value="Penggalangan Dana">Penggalangan Dana</option>
+                                            <option value="Beasiswa Anak Yatim">Beasiswa Anak Yatim</option>
+                                        </select>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="metodedonasi" name="metodedonasi" required >
+                                            <option value="">--SELECT PAYMENT--</option>
+                                            <option value="OVO">OVO</option>
+                                            <option value="DANA">DANA</option>
+                                            <option value="BCA">BCA</option>
+                                            <option value="MANDIRI">MANDIRI</option>
+                                            <option value="SHOPEEPAY">SHOPEEPAY</option>
+                                            <option value="GO-PAY">GO-PAY</option>
+                                        </select>
+                                        <p class="help-block text-danger"></p>    
+                                    </div>
+
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+
+                                    <input onclick="return confirm('Are you sure ?')" type="submit" value="Send Donation" class="btn btn-xl">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"> <span class="copyright">Copyright &copy; Berbagi.com 2021</span></div>
+                    <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://www.instagram.com/berbagicom/" target="_blank"><i class="fa fa-instagram"></i></a> </li>
+                            <li><a href="https://www.youtube.com/channel/UC0G0ZZGqxz-sFDaPQ82b9Mw?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a> </li>
+                            <li><a href="https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit"target="_blank"><i class="fa fa-linkedin"></i></a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="#">Privacy Policy</a> </li>
+                            <li><a href="#">Terms of Use</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
 </html>
