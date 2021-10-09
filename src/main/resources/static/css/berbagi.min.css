@@ -80,7 +80,7 @@ a.active, a:active, a:focus, a:hover {
 }
 .navbar-custom {
   background-color: #222;
-  border-color: transparent
+  border-color: black
 }
 .navbar-custom .navbar-brand {
   color: #fed136;
@@ -124,7 +124,7 @@ a.active, a:active, a:focus, a:hover {
 }
 @media (min-width:768px) {
   .navbar-custom {
-    background-color: transparent;
+    background-color: black;
     padding: 25px 0;
     -webkit-transition: padding .3s;
     -moz-transition: padding .3s;
