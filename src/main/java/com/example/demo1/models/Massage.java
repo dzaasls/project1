@@ -22,16 +22,27 @@ public class Massage {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long idmassage;
+    
+    @Column(name="id")
     private long id;
-    
-    @Column(name="name")
-    private String name;
-    
-    @Column(name="massgae")
-    private String massage;
 
-    @Column(name="date")
-    private String date;
+    @Column(name="namemassage")
+    private String namemassage;
+    
+     @Column(name="massage")
+    private String massage;
+     
+      @Column(name="create_at")
+    private String create_at;
+
+    public long getIdmassage() {
+        return idmassage;
+    }
+
+    public void setIdmassage(long idmassage) {
+        this.idmassage = idmassage;
+    }
 
     public long getId() {
         return id;
@@ -41,12 +52,12 @@ public class Massage {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNamemassage() {
+        return namemassage;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNamemassage(String namemassage) {
+        this.namemassage = namemassage;
     }
 
     public String getMassage() {
@@ -57,12 +68,13 @@ public class Massage {
         this.massage = massage;
     }
 
-    public String getDate() {
-        return date;
+    public String getCreate_at() {
+        return create_at;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setCreate_at(String create_at) {
+        this.create_at = create_at;
     }
-        
+      
+
 }

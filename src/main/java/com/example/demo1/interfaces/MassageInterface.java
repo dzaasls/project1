@@ -17,6 +17,4 @@ import java.util.List;
 public interface MassageInterface {
     List<Massage> getAll();
     void store(Massage massage);
-    Massage getById(long id);
-    void delete(long id);
 }

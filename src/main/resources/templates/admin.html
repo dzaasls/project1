@@ -128,12 +128,12 @@
                                 <tr>
                                     <th>No</th>
                                     <th>No ID</th>
-                                    <th>Tanggal</th>
+                                    <th>Date</th>
                                     <th>Username</th>
-                                    <th>Jumlah Donasi</th>
-                                    <th>Bukti</th>
-                                    <th>Katagori</th>
-                                    <th>Metode</th>
+                                    <th>Total Donation</th>
+                                    <th>Receipt</th>
+                                    <th>Category</th>
+                                    <th>Metodh</th>
 
                                 </tr>
 
@@ -166,25 +166,22 @@
                     <div id="overflowtest">
                         <table  class="table table-hover">
                             <tr>
-                                <th>No</th>
-                                <th>No ID</th>
-                                <th>Tanggal</th>
+             
+                                <th>ID Massage</th>
+                                <th>ID</th>
                                 <th>Username</th>
-                                <th>Email</th>
-                                <th>No Phone</th>
-                                <th>Message</th>
+                                <th>Massage</th>
+                                <th>Date</th>
+                     
 
                             </tr>
 
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
+                           <tr th:each="massage : ${list}">
+                                    <td th:text="${ massage.idmassage }"></td>
+                                    <td th:text="${ massage.id }"></td>
+                                    <td th:text="${ massage.namemassage }"></td>
+                                    <td th:text="${ massage.massage }"></td>
+                                    <td th:text="${ massage.create_at }"></td>
                             </tr>
 
                         </table>
