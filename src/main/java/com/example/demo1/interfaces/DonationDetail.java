@@ -14,6 +14,5 @@ import java.util.List;
 public interface DonationDetail {
     List<DonationDetail> getAll();
     void store(DonationDetail donationdetail);
-    DonationDetail getById(long id);
-    void delete(long id);
+
 }

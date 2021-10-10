@@ -1,5 +1,6 @@
 com\example\demo1\AuthMiddleware.class
 com\example\demo1\controllers\MassageController.class
+com\example\demo1\controllers\DonationController.class
 com\example\demo1\Demo1Application.class
 com\example\demo1\interfaces\DonationDetail.class
 com\example\demo1\services\UserService.class
@@ -10,6 +11,7 @@ com\example\demo1\models\Massage.class
 com\example\demo1\controllers\LoginController.class
 com\example\demo1\models\Donation.class
 com\example\demo1\interfaces\MassageInterface.class
+com\example\demo1\services\DonationService.class
 com\example\demo1\controllers\DashboardController.class
 com\example\demo1\repositories\DonationRepository.class
 com\example\demo1\repositories\MassageRepository.class

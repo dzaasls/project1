@@ -2,6 +2,7 @@ C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\LoginController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\DonationInterface.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\MassageInterface.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\DonationController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\models\Massage.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\Demo1Application.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\UserInterface.java
@@ -10,6 +11,7 @@ C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\DonationDetail.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\AdminController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\models\Donation.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\services\DonationService.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\models\DonationDetail.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\MassageController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\AuthMiddleware.java

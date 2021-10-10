@@ -5,10 +5,15 @@
  */
 package com.example.demo1.repositories;
 
+import com.example.demo1.models.Donation;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Dell
  */
-public interface DonationRepository {
+@Repository
+public interface DonationRepository extends JpaRepository<Donation, Long>{
     
 }

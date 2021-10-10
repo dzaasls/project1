@@ -22,70 +22,59 @@ public class Donation {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private long id;
+    private long donationid;
     
-    @Column(name="name")
-    private String name;
+    @Column(name="donationname")
+    private String donationname;
     
-    @Column(name="total")
-    private long total;
+    @Column(name="donationtotal")
+    private long donationtotal;
 
-    @Column(name="receipt")
-    private String receipt;
+    @Column(name="description")
+    private String description;
     
-    @Column(name="catagory")
-    private long catagory;
-    
-    @Column(name="date")
-    private String date;
+    @Column(name="create_at")
+    private String create_at;
 
-    public long getId() {
-        return id;
+    public long getDonationid() {
+        return donationid;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setDonationid(long donationid) {
+        this.donationid = donationid;
     }
 
-    public String getName() {
-        return name;
+    public String getDonationname() {
+        return donationname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDonationname(String donationname) {
+        this.donationname = donationname;
     }
 
-    public long getTotal() {
-        return total;
+    public long getDonationtotal() {
+        return donationtotal;
     }
 
-    public void setTotal(long total) {
-        this.total = total;
+    public void setDonationtotal(long donationtotal) {
+        this.donationtotal = donationtotal;
     }
 
-    public String getReceipt() {
-        return receipt;
+    public String getDescription() {
+        return description;
     }
 
-    public void setReceipt(String receipt) {
-        this.receipt = receipt;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public long getCatagory() {
-        return catagory;
+    public String getCreate_at() {
+        return create_at;
     }
 
-    public void setCatagory(long catagory) {
-        this.catagory = catagory;
+    public void setCreate_at(String create_at) {
+        this.create_at = create_at;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-    
     
 }
