@@ -17,23 +17,29 @@ import javax.persistence.Table;
  * @author Dell
  */
 @Entity
-@Table(name="massage")
+@Table(name = "massage")
 public class Massage {
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idmassage;
-    
-    @Column(name="id")
+
+    @Column(name = "id")
     private long id;
 
-    @Column(name="namemassage")
+    @Column(name = "namemassage")
     private String namemassage;
-    
-     @Column(name="massage")
+
+    @Column(name = "emailmassage")
+    private String emailmassage;
+
+    @Column(name = "nomassage")
+    private String nomassage;
+
+    @Column(name = "massage")
     private String massage;
-     
-      @Column(name="create_at")
+
+    @Column(name = "create_at")
     private String create_at;
 
     public long getIdmassage() {
@@ -75,6 +81,5 @@ public class Massage {
     public void setCreate_at(String create_at) {
         this.create_at = create_at;
     }
-      
 
 }

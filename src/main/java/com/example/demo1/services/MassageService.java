@@ -20,16 +20,16 @@ import org.springframework.stereotype.Service;
 public class MassageService implements MassageInterface {
 
     @Autowired
-    private MassageRepository MassageRepository;
+    private MassageRepository massageRepository;
     
     @Override
     public List<Massage> getAll() {
-        return MassageRepository.findAll();
+        return massageRepository.findAll();
     }
 
     @Override
     public void store(Massage massage) {
-        this.MassageRepository.save(massage);
+        this.massageRepository.save(massage);
     }
 }
 
