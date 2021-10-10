@@ -87,7 +87,8 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Password</th>
-                                    <th>Action</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
 
 
@@ -99,8 +100,14 @@
                                     
                                     <td>
                                         <a  class="btn btn-warning" th:href="@{/admin/{id}/edit(id=${ user.id })}">Edit</a>
-                                        <a  class="btn btn-danger" onclick="return confirm('Are you sure?')" th:href="@{/admin/{id}/delete(id=${ user.id })}">Hapus</a>
+                                        
+                                        
                                     </td>
+                                    <td> 
+                                <form onSubmit="return confirm('Do you really want to delete to-do?')" method="POST" action="#" th:action="@{/admin/{id}/delete(id=${ user.id })}">
+                                            <button type="submit" class="btn btn-danger text-white "><i class='bx bx-trash'></i>Delete</button>
+                                        </form>
+                            </td>
                                 </tr>
 
                             </table>

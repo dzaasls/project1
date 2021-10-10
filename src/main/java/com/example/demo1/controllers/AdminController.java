@@ -31,14 +31,6 @@ public class AdminController {
         return "admin";
     }
     
-    @GetMapping("/admin/create")
-    public String create(Model model) {
-        
-        User user = new User();
-        model.addAttribute("user", user);
-        
-        return "";
-    }
 
     @PostMapping("/admin/store")
     public String store(@ModelAttribute("user") User user) {
@@ -57,6 +49,6 @@ public String edit(@PathVariable(value = "id") long id, Model model) {
 @PostMapping("/admin/{id}/delete")
 public String delete(@PathVariable(value = "id") long id) {
   userInterface.delete(id);
-  return "redirect:/";
+  return "redirect:/admin";
 }
 }
