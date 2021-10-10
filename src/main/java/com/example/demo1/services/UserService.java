@@ -10,6 +10,8 @@ import com.example.demo1.models.User;
 import com.example.demo1.repositories.UserRepository;
 import java.math.BigInteger;
 import java.security.MessageDigest;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,6 @@ import org.springframework.stereotype.Service;
  *
  * @author Dell
  */
-
 @Service
 public class UserService implements UserInterface {
 
@@ -28,7 +29,7 @@ public class UserService implements UserInterface {
     public void register(User user) throws Exception {
         String hashed = this.hash(user.getPassword());
         user.setPassword(hashed);
-        
+
         this.userRepository.save(user);
     }
 
@@ -67,5 +68,34 @@ public class UserService implements UserInterface {
         rawPassword = this.hash(rawPassword);
         return password.equals(rawPassword);
     }
-}
 
+    @Autowired
+    private UserRepository UserRepository;
+
+    @Override
+    public List<User> getAll() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public void store(User user) {
+        this.userRepository.save(user);
+    }
+
+    @Override
+    public User getById(long id) {
+        Optional< User> optional = userRepository.findById(id);
+
+        if (!optional.isPresent()) {
+            throw new RuntimeException(" User not found for id :: " + id);
+        }
+
+        User user = optional.get();
+        return user;
+    }
+
+    @Override
+    public void delete(long id) {
+        this.userRepository.deleteById(id);
+    }
+}

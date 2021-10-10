@@ -5,10 +5,16 @@
  */
 package com.example.demo1.interfaces;
 
+import com.example.demo1.models.Donation;
+import java.util.List;
+
 /**
  *
  * @author Dell
  */
 public interface DonationInterface {
-    
+    List<Donation> getAll();
+    void store(Donation donation);
+    Donation getById(long id);
+    void delete(long id);
 }

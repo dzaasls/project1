@@ -6,6 +6,7 @@
 package com.example.demo1.interfaces;
 
 import com.example.demo1.models.User;
+import java.util.List;
 
 /**
  *
@@ -14,5 +15,9 @@ import com.example.demo1.models.User;
 public interface UserInterface {
     void register(User user) throws Exception;
     User auth(String email, String password) throws Exception;
+    List<User> getAll();
+    void store(User user);
+    User getById(long id);
+    void delete(long id);
 }
 

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
@@ -26,12 +27,36 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String index(Model model) {
-
-        User user = new User();
-        model.addAttribute("user", user);
-
+        model.addAttribute("list", userInterface.getAll());
         return "admin";
     }
-
     
+    @GetMapping("/admin/create")
+    public String create(Model model) {
+        
+        User user = new User();
+        model.addAttribute("user", user);
+        
+        return "";
+    }
+
+    @PostMapping("/admin/store")
+    public String store(@ModelAttribute("user") User user) {
+        userInterface.store(user);
+        return "redirect:/admin";
+    }
+    
+    @GetMapping("/admin/{id}/edit")
+public String edit(@PathVariable(value = "id") long id, Model model) {
+  User user = userInterface.getById(id);
+
+  model.addAttribute("user", user);
+  return "edituser";
+}
+
+@PostMapping("/admin/{id}/delete")
+public String delete(@PathVariable(value = "id") long id) {
+  userInterface.delete(id);
+  return "redirect:/";
+}
 }
