@@ -12,13 +12,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
  * @author Dell
  */
+
 @Controller
 public class DonationController {
 
@@ -31,11 +31,19 @@ public class DonationController {
         return "donation";
     }
 
+    @GetMapping("/donation/create")
+    public String create(Model model) {
+        
+        Donation donation = new Donation();
+        model.addAttribute("donation", donation);
+        
+        return "createdonation";
+    }
+
     @PostMapping("/donation/store")
     public String store(@ModelAttribute("donation") Donation donation) {
         donationInterface.store(donation);
-        return "redirect:/donation";
+        return "redirect:/";
     }
-
-
 }
+

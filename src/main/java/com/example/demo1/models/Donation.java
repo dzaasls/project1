@@ -22,42 +22,41 @@ public class Donation {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private long donationid;
+    private long id;
     
-    @Column(name="donationname")
-    private String donationname;
+    @Column(name="name")
+    private String name;
     
-    @Column(name="donationtotal")
-    private long donationtotal;
+    @Column(name="total")
+    private long total;
 
     @Column(name="description")
     private String description;
     
-    @Column(name="create_at")
-    private String create_at;
 
-    public long getDonationid() {
-        return donationid;
+
+    public long getId() {
+        return id;
     }
 
-    public void setDonationid(long donationid) {
-        this.donationid = donationid;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getDonationname() {
-        return donationname;
+    public String getName() {
+        return name;
     }
 
-    public void setDonationname(String donationname) {
-        this.donationname = donationname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public long getDonationtotal() {
-        return donationtotal;
+    public long getTotal() {
+        return total;
     }
 
-    public void setDonationtotal(long donationtotal) {
-        this.donationtotal = donationtotal;
+    public void setTotal(long total) {
+        this.total = total;
     }
 
     public String getDescription() {
@@ -68,13 +67,9 @@ public class Donation {
         this.description = description;
     }
 
-    public String getCreate_at() {
-        return create_at;
-    }
 
-    public void setCreate_at(String create_at) {
-        this.create_at = create_at;
-    }
+
+    
 
     
 }

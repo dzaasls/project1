@@ -15,5 +15,4 @@ import java.util.List;
 public interface DonationInterface {
     List<Donation> getAll();
     void store(Donation donation);
-
 }

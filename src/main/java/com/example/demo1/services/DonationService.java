@@ -9,7 +9,6 @@ import com.example.demo1.interfaces.DonationInterface;
 import com.example.demo1.models.Donation;
 import com.example.demo1.repositories.DonationRepository;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +18,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DonationService implements DonationInterface {
-     @Autowired
-    private DonationRepository donationRepository;
 
+    @Autowired
+    private DonationRepository donationRepository;
+    
     @Override
     public List<Donation> getAll() {
         return donationRepository.findAll();
@@ -31,6 +31,4 @@ public class DonationService implements DonationInterface {
     public void store(Donation donation) {
         this.donationRepository.save(donation);
     }
-
-}   
-
+}
