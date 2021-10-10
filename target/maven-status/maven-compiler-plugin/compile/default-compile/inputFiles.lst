@@ -1,9 +1,12 @@
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\UserController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\LoginController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\DonationInterface.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\repositories\MessageRepository.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\models\Message.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\DonationController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\Demo1Application.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\UserInterface.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\interfaces\MessageInterface.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\models\User.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\AdminController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\models\Donation.java
@@ -12,6 +15,8 @@ C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\repositories\UserRepository.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\DashboardController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\LogoutController.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\MessageController.java
+C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\services\MessageService.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\services\UserService.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\controllers\RegisterController.java
 C:\Users\Dell\Documents\NetBeansProjects\project1\src\main\java\com\example\demo1\repositories\DonationRepository.java

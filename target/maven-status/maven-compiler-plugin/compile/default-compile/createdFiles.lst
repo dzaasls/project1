@@ -8,10 +8,16 @@ com\example\demo1\models\Donation.class
 com\example\demo1\services\DonationService.class
 com\example\demo1\controllers\DashboardController.class
 com\example\demo1\repositories\DonationRepository.class
+com\example\demo1\services\MessageService.class
 com\example\demo1\controllers\AdminController.class
+.netbeans_automatic_build
+com\example\demo1\controllers\MessageController.class
+com\example\demo1\interfaces\MessageInterface.class
 com\example\demo1\interfaces\UserInterface.class
+com\example\demo1\models\Message.class
 com\example\demo1\controllers\RegisterController.class
 com\example\demo1\controllers\LogoutController.class
 com\example\demo1\controllers\UserController.class
+com\example\demo1\repositories\MessageRepository.class
 com\example\demo1\interfaces\DonationInterface.class
 com\example\demo1\repositories\UserRepository.class
