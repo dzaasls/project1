@@ -43,7 +43,7 @@ public class MessageController {
     }
 
     @PostMapping("/sendmessage/store")
-    public String store(@ModelAttribute("message") Message message) {
+    public String store(@ModelAttribute("sendmessage") Message message) {
         messageInterface.store(message);
         return "redirect:/sendmessage";
     }

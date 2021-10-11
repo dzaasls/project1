@@ -33,17 +33,17 @@ public class DonationController {
     
 
 
-    @GetMapping("/donation/create")
+    @GetMapping("/adddonation")
     public String create(Model model) {
         
         Donation donation = new Donation();
         model.addAttribute("donation", donation);
         
-        return "createdonation";
+        return "adddonation";
     }
 
-    @PostMapping("/donation/store")
-    public String store(@ModelAttribute("donation") Donation donation) {
+    @PostMapping("/adddonation/store")
+    public String store(@ModelAttribute("adddonation") Donation donation) {
         donationInterface.store(donation);
         return "redirect:/";
     }
