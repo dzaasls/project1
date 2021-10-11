@@ -317,22 +317,22 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input th:field="*{namemassage}" type="text" class="form-control" placeholder="Your Name *" name="namekontak" required data-validation-required-message="Please enter your name." th:value="${session.name}" >
+                <input th:field="*{name}" type="text" class="form-control" placeholder="Your Name *"  required data-validation-required-message="Please enter your name." th:value="${session.name}" >
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input th:field="*{emailmassage}" type="email" class="form-control" placeholder="Your Email *" name="emailkontak" required data-validation-required-message="Please enter your email address." th:value="${session.email}" >
+                <input th:field="*{email}" type="email" class="form-control" placeholder="Your Email *"  required data-validation-required-message="Please enter your email address." th:value="${session.email}" >
                 <input th:field="*{id}" type="hidden"  th:value="${session.id}">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input th:field="*{nomassage}" type="number" class="form-control" placeholder="Your Phone *" name="nokontak" required data-validation-required-message="Please enter your phone number." >
+                <input th:field="*{nophone}" type="number" class="form-control" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number." >
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control" placeholder="Your Message *" name="messagekontak" required data-validation-required-message="Please enter a message."></textarea>
+                <textarea th:field="*{message}" class="form-control" placeholder="Your Message *"  required data-validation-required-message="Please enter a message."></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>

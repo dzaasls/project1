@@ -33,7 +33,7 @@ public class MessageController {
         return "message";
     }
 
-    @GetMapping("/message/create")
+    @GetMapping("/index")
     public String create(Model model) {
         
         Message message = new Message();

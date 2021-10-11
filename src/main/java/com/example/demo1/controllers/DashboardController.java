@@ -5,14 +5,16 @@
  */
 package com.example.demo1.controllers;
 
-import com.example.demo1.interfaces.UserInterface;
-import com.example.demo1.models.User;
+import com.example.demo1.interfaces.DonationInterface;
+import com.example.demo1.models.Donation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+
 
 /**
  *
@@ -21,17 +23,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class DashboardController {
 
-    @Autowired
-    private UserInterface userInterface;
+ @Autowired
+    private DonationInterface donationInterface;
 
     @GetMapping("/dashboard")
     public String index(Model model) {
-
-        User user = new User();
-        model.addAttribute("user", user);
-
+        model.addAttribute("list", donationInterface.getAll());
         return "dashboard";
     }
-
     
+
+
+
+
+
 }

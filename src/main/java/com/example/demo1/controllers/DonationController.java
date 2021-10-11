@@ -30,6 +30,8 @@ public class DonationController {
         model.addAttribute("list", donationInterface.getAll());
         return "donation";
     }
+    
+
 
     @GetMapping("/donation/create")
     public String create(Model model) {
