@@ -67,7 +67,7 @@
                 <div class="intro-text">
                     <div class="intro-lead-in">Welcome To Our Foundation</div>
                     <div class="intro-heading">HELLO <span th:text="${session.name}"></span>!</div>
-                    <a href="#services" class="page-scroll btn btn-xl">DASHBOARD</a> </div>
+                    <a href="http://localhost:8080/detail" class="page-scroll btn btn-xl">DONATION</a> </div>
             </div>
         </header>
 
@@ -108,73 +108,7 @@
                 </div>
         </section>
 
-       
-
-    <section id="donation" >
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">DONATION FORM</h2>
-                    <h3 class="section-subheading text-muted">Please fullfil the donation form.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form name="donationform"  action="" method="post" >
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" name="namadonasi" id="namadonasi" required data-validation-required-message="Please enter your name." th:value="${session.name}" >
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Total Donation *" name="totaldonasi" id="totaldonasi" min="10000" required data-validation-required-message="Please enter your total donation.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="file" class="form-control" placeholder="Payment Receipt *" name="receiptdonasi" id="receiptdonasi" min="0" required data-validation-required-message="Please enter your receipt number." accept="image/gif,image/jpeg,image/jpg,image/png,">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <select class="form-control" id="katagoridonasi" name="katagoridonasi" required>
-                                        <option value="">--SELECT CATEGORY--</option>
-                                        <option value="Pembangunan Masjid">Pembangunan Masjid</option>
-                                        <option value="Pembangunan Pusat Dagang">Pembangunan Pusat Dagang</option>
-                                        <option value="Pembangunan Jembatan">Pembangunan Jembatan</option>
-                                        <option value="Pembangunan Pesantren">Pembangunan Pesantren</option>
-                                        <option value="Penggalangan Dana">Penggalangan Dana</option>
-                                        <option value="Beasiswa Anak Yatim">Beasiswa Anak Yatim</option>
-                                    </select>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" id="metodedonasi" name="metodedonasi" required >
-                                        <option value="">--SELECT PAYMENT--</option>
-                                        <option value="OVO">OVO</option>
-                                        <option value="DANA">DANA</option>
-                                        <option value="BCA">BCA</option>
-                                        <option value="MANDIRI">MANDIRI</option>
-                                        <option value="SHOPEEPAY">SHOPEEPAY</option>
-                                        <option value="GO-PAY">GO-PAY</option>
-                                    </select>
-                                    <p class="help-block text-danger"></p>    
-                                </div>
-
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-
-                                <input onclick="return confirm('Are you sure ?')" type="submit" value="Send Donation" class="btn btn-xl">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <footer>
         <div class="container">
             <div class="row">

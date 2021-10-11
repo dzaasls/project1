@@ -33,19 +33,19 @@ public class MessageController {
         return "message";
     }
 
-    @GetMapping("/index")
+    @GetMapping("/sendmessage")
     public String create(Model model) {
         
         Message message = new Message();
         model.addAttribute("message", message);
         
-        return "index";
+        return "sendmessage";
     }
 
-    @PostMapping("/message/store")
+    @PostMapping("/sendmessage/store")
     public String store(@ModelAttribute("message") Message message) {
         messageInterface.store(message);
-        return "redirect:/index";
+        return "redirect:/sendmessage";
     }
 }
 

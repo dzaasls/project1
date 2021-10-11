@@ -1,11 +1,16 @@
 com\example\demo1\AuthMiddleware.class
 com\example\demo1\controllers\DonationController.class
 com\example\demo1\Demo1Application.class
+com\example\demo1\repositories\DetailRepository.class
+com\example\demo1\services\DetailService.class
 com\example\demo1\services\UserService.class
+com\example\demo1\controllers\DetailController.class
 com\example\demo1\models\User.class
 com\example\demo1\controllers\LoginController.class
 com\example\demo1\models\Donation.class
 com\example\demo1\services\DonationService.class
+com\example\demo1\interfaces\DetailInterface.class
+com\example\demo1\models\Detail.class
 com\example\demo1\controllers\DashboardController.class
 com\example\demo1\repositories\DonationRepository.class
 com\example\demo1\services\MessageService.class

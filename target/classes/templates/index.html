@@ -301,6 +301,16 @@
             </div>
         </section>
 
+        <section id="location">
+<div class="container">
+<div class="row">
+  <div class="col-lg-12 text-center">
+    <h2 class="section-heading">OUR LOCATION</h2>
+    <h3 class="section-subheading text-muted">Let's Check Our Location</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5090708975613!2d106.8228753153742!3d-6.196363362431055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5a3628d8a43%3A0x214e8d22ed4fc7c8!2sDuch%20Bank%20AG!5e0!3m2!1sid!2sid!4v1624706201283!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="googlemaps"></iframe>
+  </div>
+</div>
+</section>
      
 <!-- Contact Section -->
 <section id="contact">
@@ -313,36 +323,14 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <form method="POST" action="#" th:action="@{/massage/store}" th:object="${massage}">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input th:field="*{name}" type="text" class="form-control" placeholder="Your Name *"  required data-validation-required-message="Please enter your name." th:value="${session.name}" >
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input th:field="*{email}" type="email" class="form-control" placeholder="Your Email *"  required data-validation-required-message="Please enter your email address." th:value="${session.email}" >
-                <input th:field="*{id}" type="hidden"  th:value="${session.id}">
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input th:field="*{nophone}" type="number" class="form-control" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number." >
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <textarea th:field="*{message}" class="form-control" placeholder="Your Message *"  required data-validation-required-message="Please enter a message."></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="clearfix"></div>
+        
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <button onclick="return confirm('Are you sure ?')" type="submit" class="btn btn-xl">Send Message</button>
+              <a href="http://localhost:8080/message">
+              <button  type="submit" class="btn btn-xl">Send Message</button>
+              </a>
             </div>
-          </div>
-        </form>
+          
       </div>
     </div>
   </div>

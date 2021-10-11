@@ -41,6 +41,9 @@ public class Detail {
     
     @Column(name="total")
     private long total;
+    
+    @Column(name="method")
+    private String method;
 
     public long getId() {
         return id;
@@ -50,6 +53,16 @@ public class Detail {
         this.id = id;
     }
 
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
+    
+    
     public long getIddonation() {
         return iddonation;
     }
